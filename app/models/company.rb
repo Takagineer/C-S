@@ -4,11 +4,12 @@ class Company < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+
+
   with_options presence: true do
     validates :email
     validates :password
     validates :company_name
     validates :company_introduction
-
   end
 end
