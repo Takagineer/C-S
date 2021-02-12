@@ -1,0 +1,13 @@
+.divided_company_info{
+  list-style: none;
+  display: flex; 
+}
+
+.top_content{
+  background-color: coral;
+}
+
+
+.low_content{
+  background-color: chartreuse;
+}

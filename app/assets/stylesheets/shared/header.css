@@ -1,0 +1,25 @@
+header{
+  height: 15vh;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.logo{
+  font-size: 60px;
+}
+
+
+.navi{
+  display: flex;
+}
+
+
+.top_logo_company{
+  list-style: none;
+}
+
+.top_logo_student{
+  list-style: none;
+}
