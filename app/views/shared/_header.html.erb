@@ -5,10 +5,14 @@
   
   <div class="navi">
     <ul class="top_logo_company">
-      <li><%= link_to "company_新規登録",new_company_registration_path %></li>
-      <li><%= link_to "ログイン", "#" %></li>
-      <li><%= link_to "ログアウト", "#" %></li>
-      <li><%= link_to "マイページ", "#" %></li>
+    <%# ユーザーのログイン状態によって表示内容を変更する %>
+      <% if company_signed_in? %>
+        <li><%= button_to 'Exit', destroy_company_session_path, method: :delete %></li>
+        <li><%= link_to "マイページ", "#" %></li>
+      <% else %>
+        <li><%= link_to "company_新規登録",new_company_registration_path %></li>
+        <li><%= link_to "ログイン", new_company_session_path %></li>
+      <% end %>
     </ul>
 
     <ul class="top_logo_student">
