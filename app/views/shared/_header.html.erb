@@ -7,7 +7,7 @@
     <ul class="top_logo_company">
     <%# ユーザーのログイン状態によって表示内容を変更する %>
       <% if company_signed_in? %>
-        <li><%= link_to "マイページ", "#" %></li>
+        <li><%= link_to current_company.company_name+"様マイページ", "business_company_path(@company.id)" %></li>
         <li><%= button_to 'Exit', destroy_company_session_path, method: :delete %></li>
       <% else %>
         <li><%= link_to "company_新規登録",new_company_registration_path %></li>
@@ -17,7 +17,7 @@
 
     <ul class="top_logo_student">
       <% if student_signed_in? %>
-        <li><%= link_to "マイページ", "#" %></li>
+        <li><%= link_to "student_マイページ", "#" %></li>
         <li><%= button_to 'Exit', destroy_student_session_path, method: :delete %></li>
       <% else %>
         <li><%= link_to "student_新規登録",new_student_registration_path %></li>
