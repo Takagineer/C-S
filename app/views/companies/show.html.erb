@@ -1,1 +1,33 @@
-<h1><%= @company.company_name 用詳細ページ%></h1>
+<%= render "shared/header" %>
+
+<h1><%= current_company.company_name+"様マイページ" %></h1>
+
+<div class = "subject">現在募集中の業務</div>
+<%# 業務募集機能を実装した後に、テーブルの内容をインスタンス変数に含めて、それをeachメソッドで以下に記述する。 %>
+<div class ="accepting">
+  <div>業務内容</div>
+  <div>いいね</div>
+  <div>ブックマーク機能</div>
+  <div> <%= link_to "申込者" , "#" %></div>
+</div>
+
+<div class ="accepting">
+  <div>業務内容</div>
+  <div>いいね</div>
+  <div>ブックマーク機能</div>
+  <div> <%= link_to "申込者" , "#" %></div>
+</div>
+
+<div class ="accepting">
+  <div>業務内容</div>
+  <div>いいね</div>
+  <div>ブックマーク機能</div>
+  <div> <%= link_to "申込者" , "#" %></div>
+</div>
+
+<div class = "link_btn" >
+  <div><%= link_to "会社情報編集ページ","#"%></div>
+  <div><%= link_to "業務募集投稿ページ","#"%></div>
+</div>
+
+<%= render "shared/footer" %>

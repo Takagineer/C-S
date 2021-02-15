@@ -1,0 +1,14 @@
+.subject{
+  font-size: 30px;
+}
+
+
+.accepting{
+  display: flex;
+}
+
+.link_btn{
+  background-color: aqua;
+  width: 20vw;
+  
+}
