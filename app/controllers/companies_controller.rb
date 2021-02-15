@@ -1,9 +1,7 @@
 class CompaniesController < ApplicationController
   def show
+    @company = Company.find([:id])
   end
 
-  private
-    def  choose_company
-      @company = Compnay.find([:id])
-    end
+  
 end

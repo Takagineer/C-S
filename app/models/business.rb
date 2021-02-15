@@ -1,5 +1,7 @@
 class Business < ApplicationRecord
 
+  belongs_to :company
+
   with_options presence: true do
     validates :content
     validates :department
