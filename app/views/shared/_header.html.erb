@@ -1,14 +1,14 @@
 <header class="top_page_contents">
   <div class="logo">
-    C ×　S
+    <%=link_to "C × S", businesses_path %>
   </div>
   
   <div class="navi">
     <ul class="top_logo_company">
     <%# ユーザーのログイン状態によって表示内容を変更する %>
       <% if company_signed_in? %>
-        <li><%= button_to 'Exit', destroy_company_session_path, method: :delete %></li>
         <li><%= link_to "マイページ", "#" %></li>
+        <li><%= button_to 'Exit', destroy_company_session_path, method: :delete %></li>
       <% else %>
         <li><%= link_to "company_新規登録",new_company_registration_path %></li>
         <li><%= link_to "ログイン", new_company_session_path %></li>
@@ -16,10 +16,13 @@
     </ul>
 
     <ul class="top_logo_student">
-      <li><%= link_to "student_新規登録",new_student_registration_path %></li>
-      <li><%= link_to "ログイン", "#" %></li>
-      <li><%= link_to "ログアウト", "#" %></li>
-      <li><%= link_to "マイページ", "#" %></li>
+      <% if student_signed_in? %>
+        <li><%= link_to "マイページ", "#" %></li>
+        <li><%= button_to 'Exit', destroy_student_session_path, method: :delete %></li>
+      <% else %>
+        <li><%= link_to "student_新規登録",new_student_registration_path %></li>
+        <li><%= link_to "ログイン", new_student_session_path %></li>
+      <% end %>
     </ul>
   </div>
 
