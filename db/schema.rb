@@ -14,12 +14,13 @@ ActiveRecord::Schema.define(version: 2021_02_12_115610) do
 
   create_table "businesses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "content", null: false
-    t.string "department", null: false
+    t.text "department", null: false
     t.text "period", null: false
-    t.integer "reward", null: false
-    t.integer "number", null: false
+    t.text "reward", null: false
+    t.text "number", null: false
     t.text "comment", null: false
-    t.string "skill", null: false
+    t.text "skill", null: false
+    t.integer "company_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
