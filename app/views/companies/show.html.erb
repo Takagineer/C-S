@@ -4,8 +4,8 @@
 
 <div class = "subject">現在募集中の業務</div>
 
-
-  <% @company_business.each do |business| %>
+<% if @company_businesses.present? then %>
+  <% @company_businesses.each do |business| %>
     <div class ="accepting">
       <div class = "business_contents"><%= "・"+ business.content%></div>
       <div class = "likes">いいね件数の表示</div>
@@ -13,7 +13,7 @@
       <div class = "student_applicants"> <%= link_to "申込者" , "#" %></div>
     </div>
   <% end %>
-
+<% end %>
   
 
 <div class = "link_btn" >
