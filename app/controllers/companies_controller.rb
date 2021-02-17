@@ -4,6 +4,10 @@ class CompaniesController < ApplicationController
   end
   
   def show
+    @company_business = Business.select("content")
+  end
+
+  def new
   end
 
 end

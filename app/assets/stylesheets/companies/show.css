@@ -10,5 +10,22 @@
 .link_btn{
   background-color: aqua;
   width: 20vw;
-  
+}
+
+.business_contents{
+  margin: 10px;
+  width: 20vw;
+  font-size: 20px;
+}
+
+.likes{
+  margin: 10px;
+}
+
+.book_mark{
+  margin: 10px;
+}
+
+.student_applicants{
+  margin: 10px;
 }
