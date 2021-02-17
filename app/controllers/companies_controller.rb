@@ -4,10 +4,10 @@ class CompaniesController < ApplicationController
   end
   
   def show
-    @company_business = Business.select("content")
+    @company_businesses = Business.select("content").where(company_id = params[:id])
   end
 
   def new
   end
-
+  
 end
