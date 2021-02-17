@@ -3,16 +3,16 @@
 <h1><%= current_company.company_name+"様マイページ" %></h1>
 
 <div class = "subject">現在募集中の業務</div>
-<%# 業務募集機能を実装した後に、テーブルの内容をインスタンス変数に含めて、それをeachメソッドで以下に記述する。 %>
-<div class ="accepting">
 
 
-<% @company_business.each do |business| %>
-  <%= business.content%>
-  <div>いいね</div>
-  <div>ブックマーク機能</div>
-  <div> <%= link_to "申込者" , "#" %></div>
-<% end %>
+  <% @company_business.each do |business| %>
+    <div class ="accepting">
+      <div class = "business_contents"><%= "・"+ business.content%></div>
+      <div class = "likes">いいね件数の表示</div>
+      <div class = "book_mark">ブックマーク機能？</div>
+      <div class = "student_applicants"> <%= link_to "申込者" , "#" %></div>
+    </div>
+  <% end %>
 
   
 
