@@ -47,8 +47,9 @@
       <label class="form-text">会社紹介文を入力してください</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :company_introduction, class:"input-default", id:"nickname", placeholder:"例) 弊社は創業以来〇〇年連続黒字経営している企業で、更なる利益、、、", maxlength:"40" %>
+    <%= f.text_area :company_introduction, class:"input-default", id:"nickname", placeholder:"例) 弊社は創業以来〇〇年連続黒字経営している企業で、更なる利益、、、", maxlength:"400" %>
     
+  
 
   <div class='register-btn'>
     <%= f.submit "会社情報編集" ,class:"register-red-btn" %>

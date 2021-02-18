@@ -1,6 +1,6 @@
-<h2>学生様　新規登録</h2>
+<h2>企業様　新規登録</h2>
 
-<%= form_with model: @stundet, url: student_registration_path, class: 'registration-main', local: true do |f| %>
+<%= form_with model: @student, url: student_registration_path, class: 'registration-main', local: true do |f| %>
 <div class='form-wrap'>
   <div class='form-header'>
     <h1 class='form-header-text'>
@@ -15,7 +15,7 @@
     </div>
     <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
   </div>
-
+  
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">パスワード</label>
@@ -34,55 +34,63 @@
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">大学名</label>
-    </div>
-    <%= f.text_area :university, class:"input-default", id:"nickname", placeholder:"例) furima太郎", maxlength:"40" %>
-  </div>
-  
-  
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">お名前(全角)</label>
       <span class="indispensable">必須</span>
     </div>
-    <div class='input-name-wrap'>
-      <%= f.text_area :family_name, class:"input-name", id:"first-name", placeholder:"例) 山田" %>
-      <%= f.text_area :last_name, class:"input-name", id:"last-name", placeholder:"例) 陸太郎" %>
+    <%= f.text_area :university, class:"input-default", id:"nickname", placeholder:"例) 〇〇大学", maxlength:"40" %>
+  </div>
+  
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">姓</label>
+      <span class="indispensable">必須</span>
     </div>
+    <%= f.text_area :first_name, class:"input-default", id:"nickname", placeholder:"例) 田中", maxlength:"40" %>
   </div>
 
   <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">自己紹介</label>
+      <label class="form-text">名</label>
+      <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :student_introduction, class:"input-default", id:"nickname", placeholder:"例) 〇〇と申します。△△大学□□学部に所属しております。", maxlength:"40" %>
+    <%= f.text_area :last_name, class:"input-default", id:"nickname", placeholder:"例) 太郎", maxlength:"40" %>
+  </div>
+
+  <div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">自己紹介文を入力してください</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :student_introduction, class:"input-default", id:"nickname", placeholder:"例) 私は現在〇〇大学に所属しています。専攻は、、、", maxlength:"400" %>
   </div>
 
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">スキル</label>
+      <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :skill, class:"input-default", id:"nickname", placeholder:"例) Excelの基本的な動作。簿記３級所持。英検２級。", maxlength:"40" %>
+    <%= f.text_area :skill, class:"input-default", id:"nickname", placeholder:"例) 簿記３級", maxlength:"40" %>
   </div>
-  
+
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">年齢</label>
+      <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :age, class:"input-default", id:"nickname", placeholder:"例) 20", maxlength:"40" %>
+    <%= f.text_area :age, class:"input-default", id:"nickname", placeholder:"例) 20歳", maxlength:"40" %>
   </div>
 
-    <div class="form-group">
+  <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">年次</label>
+      <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :year, class:"input-default", id:"nickname", placeholder:"例) 2", maxlength:"40" %>
+    <%= f.text_area :year, class:"input-default", id:"nickname", placeholder:"例) 2回生", maxlength:"40" %>
   </div>
 
- 
+
+  <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
   </div>
-
 </div>
 <% end %>
-
-

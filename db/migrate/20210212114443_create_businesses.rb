@@ -11,6 +11,7 @@ class CreateBusinesses < ActiveRecord::Migration[6.0]
       t.text     :skill       , null: false
       t.integer  :company_id  , null: false,foreign_key:true
 
+
       t.timestamps
     end
   end
