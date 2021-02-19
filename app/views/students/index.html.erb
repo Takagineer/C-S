@@ -1,24 +1,8 @@
 <%= render "shared/header" %>
 
-<h1><%= current_company.company_name+"様　募集業務　確認ページ" %></h1>
-
-<div class = "subject">現在募集中の業務</div>
-
-<% if @company_businesses.present? then %>
-  <% @company_businesses.each do |business| %>
-    <div class ="accepting">
-      <div class = "business_contents"><%= "・"+ business.content%></div>
-      <div class = "likes">いいね件数の表示</div>
-      <div class = "book_mark">ブックマーク機能？</div>
-      <div class = "student_applicants"> <%= link_to "申込者" , "#" %></div>
-    </div>
-  <% end %>
-<% end %>
-  
-
-<div class = "link_btn" >
-  <div><%= link_to "会社情報編集ページ",edit_company_registration_path %></div>
-  <div><%= link_to "業務募集投稿ページ",new_company_business_path(current_company.id)%></div>
-</div>
+<div>検索機能</div>
+<div>検索した業務を表示して、それに対していいね機能を実装する</div>
+<div>上記2つの機能を実装したのちに応募機能を実装する。</div>
+<div>状況確認ページ</div>
 
 <%= render "shared/footer" %>
