@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   resources :companies, only: [:index, :show, :edit] do
     resources :businesses, only: [:index, :new, :create]
   end
-
+  resources :students, only: [:index] 
 end
