@@ -70,8 +70,8 @@ ActiveRecord::Schema.define(version: 2021_02_12_115610) do
     t.string "last_name", null: false
     t.text "student_introduction", null: false
     t.string "skill", null: false
-    t.integer "age", null: false
-    t.integer "year", null: false
+    t.string "age", null: false
+    t.string "year", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

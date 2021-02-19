@@ -11,8 +11,8 @@ class DeviseCreateStudents < ActiveRecord::Migration[6.0]
       t.string  :last_name            , null: false
       t.text    :student_introduction , null: false
       t.string  :skill                , null: false
-      t.integer :age                  , null: false
-      t.integer :year                 , null: false
+      t.string  :age                  , null: false
+      t.string  :year                 , null: false
 
 
       ## Recoverable
