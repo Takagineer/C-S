@@ -1,0 +1,13 @@
+<%= render "shared/header" %>
+
+<% if @student_search_businesses.present? %>
+  <% @student_search_businesses.each do |business| %>
+    <%= business.content %>
+    <%= business.company_id %>
+  <% end %>
+<% else %>
+  <%= puts "該当する業務はありません。"%>
+<%end%>
+
+
+<%= render "shared/footer" %>
