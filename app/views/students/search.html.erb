@@ -1,0 +1,16 @@
+<%= render "shared/header" %>
+<h1><%= current_student.first_name+"様 検索結果一覧ページ" %></h1>
+
+<% if @student_search_businesses.present? %>
+  <div>
+    <% @student_search_businesses.each do |business| %>
+    <%= business.content %>
+    <%= Company.select("company_name").where(id = "business.company_id" ) %>
+  </div>
+  <% end %>
+<%end%>
+
+<div><%= "マイページへのボタン作成" %></div>
+
+
+<%= render "shared/footer" %>

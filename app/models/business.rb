@@ -12,4 +12,9 @@ class Business < ApplicationRecord
     validates :skill
   end
   
+  def self.search(search)
+    return Business.all unless search
+    Business.where('content LIKE(?)', "%#{search}%")
+  end
+
 end

@@ -16,4 +16,6 @@ class Student < ApplicationRecord
     validates :year
   end
 
+  
+
 end
