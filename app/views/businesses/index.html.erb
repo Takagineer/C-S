@@ -10,11 +10,8 @@
     <div class="company_information">
     <% @business.each do |business|%>
       <ul class="divided_company_info">
-
-        
-        
           <li class = "top">
-            <%= "会社名を表示させる"%>
+            <%=  %>
           </li>
           <li class="middle">
             <%= business.content%>
@@ -22,8 +19,6 @@
           <li class="low">
             <%= business.reward%>
           </li>
-        
-
       </ul>
       <% end %>
     </div>
@@ -31,7 +26,7 @@
 
   <div class="low_content">
     <h1>
-      人気の企業一覧
+      人気の業務一覧
     </h1>
     ここにいいね件数の多い会社を出力する
   </div>
