@@ -5,7 +5,7 @@
   <div>
     <% @student_search_businesses.each do |business| %>
     <%= business.content %>
-    <%= Company.find_by("").company_name %>
+    <%= Company.select("company_name").where(id = "business.company_id" ) %>
   </div>
   <% end %>
 <%end%>
