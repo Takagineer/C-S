@@ -8,45 +8,24 @@
 
   <div class="middle_content">
     <div class="company_information">
+    <% @business.each do |business|%>
       <ul class="divided_company_info">
-        <div class="first_company">
-          <li class= "top">
-            情報
-          </li>
-          <li class="middle">
-            会社名
-          </li>
-          <li class="low">
-            応募状況
-          </li>
-        </div>
 
-        <div class="second_company">
-          <li class= "top">
-            情報
+        
+        
+          <li class = "top">
+            <%= "会社名を表示させる"%>
           </li>
           <li class="middle">
-            会社名
+            <%= business.content%>
           </li>
           <li class="low">
-            応募状況
+            <%= business.reward%>
           </li>
-        </div>
-
-        <%# ３社目 %>
-        <div class="third_company">
-          <li class= "top">
-            情報
-          </li>
-          <li class="middle">
-            会社名
-          </li>
-          <li class="low">
-            応募状況
-          </li>
-        </div>
+        
 
       </ul>
+      <% end %>
     </div>
   </div>
 

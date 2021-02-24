@@ -1,7 +1,7 @@
 class BusinessesController < ApplicationController
 
   def index 
-    @business = Business.new
+    @business = Business.all.where(ids = "")
   end
 
   def show

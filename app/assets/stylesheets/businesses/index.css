@@ -1,6 +1,5 @@
 .divided_company_info{
   list-style: none;
-  display: flex; 
 }
 
 .top_content{
@@ -10,4 +9,8 @@
 
 .low_content{
   background-color: chartreuse;
+}
+
+.company_information{
+  display: flex;
 }
