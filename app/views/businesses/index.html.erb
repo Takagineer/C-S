@@ -8,51 +8,30 @@
 
   <div class="middle_content">
     <div class="company_information">
-      <ul class="divided_company_info">
-        <div class="first_company">
-          <li class= "top">
-            情報
-          </li>
-          <li class="middle">
-            会社名
-          </li>
-          <li class="low">
-            応募状況
-          </li>
-        </div>
-
-        <div class="second_company">
-          <li class= "top">
-            情報
-          </li>
-          <li class="middle">
-            会社名
-          </li>
-          <li class="low">
-            応募状況
-          </li>
-        </div>
-
-        <%# ３社目 %>
-        <div class="third_company">
-          <li class= "top">
-            情報
-          </li>
-          <li class="middle">
-            会社名
-          </li>
-          <li class="low">
-            応募状況
-          </li>
-        </div>
-
-      </ul>
+    <% @business.each do |business|%>
+      <%# <% link_to "#" do %> 
+        <ul class="divided_company_info">
+            <li class = "business_company_image">
+              <%= image_tag business.image, class:"business_img" %>
+            </li>
+            <li class = "business_company_name">
+              <%= %>
+            </li>
+            <li class="business_content">
+              <%= business.content%>
+            </li>
+            <li class="business_reward">
+              <%= business.reward%>
+            </li>
+        </ul>
+      <%# <% end %> 
+      <% end %>
     </div>
   </div>
 
   <div class="low_content">
     <h1>
-      人気の企業一覧
+      人気の業務一覧
     </h1>
     ここにいいね件数の多い会社を出力する
   </div>

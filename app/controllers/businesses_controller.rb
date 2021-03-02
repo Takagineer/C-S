@@ -1,7 +1,7 @@
 class BusinessesController < ApplicationController
 
   def index 
-    @business = Business.new
+    @business = Business.all.where(ids = "")
   end
 
   def show
@@ -22,7 +22,7 @@ class BusinessesController < ApplicationController
 
   private
     def business_params
-      params.require(:business).permit(:content, :department, :period, :reward, :number, :comment, :skill).merge(company_id: current_company.id)
+      params.require(:business).permit(:content, :department, :period, :reward, :number, :comment, :skill, :image).merge(company_id: current_company.id)
     end
   
 end

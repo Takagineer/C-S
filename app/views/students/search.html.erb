@@ -5,12 +5,12 @@
   <div>
     <% @student_search_businesses.each do |business| %>
     <%= business.content %>
-    <%= Company.select("company_name").where(id = "business.company_id" ) %>
+    <%= image_tag business.image,class:"business_image" %>
   </div>
   <% end %>
 <%end%>
 
-<div><%= "マイページへのボタン作成" %></div>
+<%# <div><%= link_to students_path %></div> %>
 
 
 <%= render "shared/footer" %>
