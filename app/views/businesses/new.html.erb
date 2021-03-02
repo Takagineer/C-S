@@ -3,7 +3,7 @@
 
 <%= form_with model: @business, url:company_businesses_path, local: true do |f| %>
   <div class = "title">募集業務投稿ページ</div>
-    <div class = "">業務内容</div>
+    <div>業務内容</div>
       <%= f.text_area :content %>
     <div>配属部署</div>
       <%= f.text_area :department %>
@@ -17,6 +17,9 @@
       <%= f.text_area :comment %>
     <div>求めるスキル</div>
       <%= f.text_area :skill %>
+    <div>写真</div>
+      <%= f.file_field :image %>
+    
     <%= f.submit "投稿" %>
 <% end %>
 

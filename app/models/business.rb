@@ -1,6 +1,8 @@
 class Business < ApplicationRecord
 
   belongs_to :company
+  has_one_attached :image
+
 
   with_options presence: true do
     validates :content

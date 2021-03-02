@@ -11,6 +11,13 @@
 
   <div class="form-group">
     <div class='form-text-wrap'>
+      <label class="form-text">サイトに張り出す写真</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.file_field :image %>
+  </div>
+    
+    <div class='form-text-wrap'>
       <label class="form-text">メールアドレス</label>
       <span class="indispensable">必須</span>
     </div>
@@ -46,7 +53,7 @@
       <label class="form-text">会社紹介文を入力してください</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.text_area :company_introduction, class:"input-default", id:"nickname", placeholder:"例) 弊社は創業以来〇〇年連続黒字経営している企業で、更なる利益、、、", maxlength:"40" %>
+    <%= f.text_area :company_introduction, class:"input-default", id:"nickname", placeholder:"例) 弊社は創業以来〇〇年連続黒字経営している企業で、更なる利益、、、", maxlength:"400" %>
     
 
   <div class='register-btn'>

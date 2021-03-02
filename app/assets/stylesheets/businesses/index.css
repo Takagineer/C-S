@@ -15,3 +15,8 @@
 .company_information{
   display: flex;
 }
+
+.business_img{
+  height: 33vh;
+  width: 33vh;
+}

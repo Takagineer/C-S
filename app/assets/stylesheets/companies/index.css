@@ -29,3 +29,8 @@
 .student_applicants{
   margin: 10px;
 }
+
+.company_img{
+  height: 33vh;
+  width: 33vw;
+}

@@ -9,17 +9,22 @@
   <div class="middle_content">
     <div class="company_information">
     <% @business.each do |business|%>
-      <ul class="divided_company_info">
-          <li class = "top">
-            <%=  %>
-          </li>
-          <li class="middle">
-            <%= business.content%>
-          </li>
-          <li class="low">
-            <%= business.reward%>
-          </li>
-      </ul>
+      <%# <% link_to "#" do %> 
+        <ul class="divided_company_info">
+            <li class = "business_company_image">
+              <%= image_tag business.image, class:"business_img" %>
+            </li>
+            <li class = "business_company_name">
+              <%= %>
+            </li>
+            <li class="business_content">
+              <%= business.content%>
+            </li>
+            <li class="business_reward">
+              <%= business.reward%>
+            </li>
+        </ul>
+      <%# <% end %> 
       <% end %>
     </div>
   </div>
