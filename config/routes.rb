@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'likes/create'
-  get 'likes/destroy'
+  
   devise_for :students, controllers: {
     sessions:'students/sessions',
     passwords:'students/passwords',
@@ -21,6 +20,9 @@ Rails.application.routes.draw do
   resources :companies, only: [:index, :show, :edit] do
     resources :businesses, only: [:index, :new, :create]
   end
+
+  resources :likes, only:[:create, :destroy]
+
   resources :students, only: [:index, :search] do 
     member do
       get 'search'

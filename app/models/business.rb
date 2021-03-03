@@ -19,4 +19,12 @@ class Business < ApplicationRecord
     Business.where('content LIKE(?)', "%#{search}%")
   end
 
+  def like(student)
+    likes.create(student_id: student.id)
+  end
+
+  def unlike(student)
+    likes.create(student_id: student.id).destroy
+  end
+
 end
