@@ -1,11 +1,20 @@
 class LikesController < ApplicationController
+  before_action :set_business
+
   def create
-    @business = Business.find(params[:business_id])
-    @business.like(current_user)
+    @like = Like.create(student_id: current_student.id, business_id: params[:business_id])
+    @likes = Like.where(business_id: params[:business_id])
   end
 
   def destroy
-    @business = Like.find(params[:id]).business
-    @business.unlike(current_user)
+    @like = Like.find_by(student_id: current_student.id, business_id: params[:business_id])
+    @like.destroy
+    @likes = Like.where(business_id: params[:business_id])
   end
+
+  private
+    def set_business
+      @business = Business.find(params[:business_id])
+    end
+
 end

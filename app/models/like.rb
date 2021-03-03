@@ -4,4 +4,5 @@ class Like < ApplicationRecord
 
   validates :student_id, presence: true
   validates :business_id, presence: true
+  validates_uniqueness_of :business_id, scope: :student_id
 end
