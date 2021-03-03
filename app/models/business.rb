@@ -2,7 +2,7 @@ class Business < ApplicationRecord
 
   belongs_to :company
   has_one_attached :image
-  has_many :likes,dependent::destroy
+  has_many :likes,dependent: :destroy
 
   with_options presence: true do
     validates :content
