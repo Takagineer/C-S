@@ -23,6 +23,11 @@
             <li class="business_reward">
               <%= business.reward%>
             </li>
+
+              <div id="like-btn-<%= business.id %>">
+                <%= render 'likes/like', business: business, company: @company %>
+              </div>
+
         </ul>
       <%# <% end %> 
       <% end %>
@@ -31,9 +36,10 @@
 
   <div class="low_content">
     <h1>
-      人気の業務一覧
+      人気の企業一覧
     </h1>
     ここにいいね件数の多い会社を出力する
+    
   </div>
 
 

@@ -1,6 +1,7 @@
 class Business < ApplicationRecord
 
   belongs_to :company
+  belongs_to :student
   has_one_attached :image
   has_many :likes,dependent: :destroy
 
@@ -19,8 +20,8 @@ class Business < ApplicationRecord
     Business.where('content LIKE(?)', "%#{search}%")
   end
 
-  def like_user(user_id)
-    likes.find_by(user_id: user_id)
+  def liked_by?(student)
+    likes.where(student_id: student.id).exists?
   end
 
 end

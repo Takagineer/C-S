@@ -1,15 +1,18 @@
 class LikesController < ApplicationController
+  before_action :authenticate_student!
   before_action :set_business
 
   def create
-    @like = Like.create(student_id: current_student.id, business_id: params[:business_id])
-    @likes = Like.where(business_id: params[:business_id])
+    business = Business.find(params[:business_id]) 
+    student = current_student
+    like = Like.create(business_id: business.id, student_id: student.id)
   end
 
   def destroy
-    @like = Like.find_by(student_id: current_student.id, business_id: params[:business_id])
-    @like.destroy
-    @likes = Like.where(business_id: params[:business_id])
+    business = Business.find(params[:business_id]) 
+    student = current_student
+    like = Like.find_by(business_id: business.id, student_id: student.id)
+    like.delete
   end
 
   private

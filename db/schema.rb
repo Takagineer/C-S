@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(version: 2021_02_24_083211) do
     t.string "last_name", null: false
     t.text "student_introduction", null: false
     t.string "skill", null: false
-    t.string "age", null: false
+    t.date "birthday", null: false
     t.string "year", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"

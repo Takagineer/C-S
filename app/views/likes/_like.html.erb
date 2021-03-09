@@ -1,0 +1,9 @@
+<% if business.liked_by?(current_student) %>
+   <%= link_to(company_business_like_path(@company.ids, business.id), method: :delete, remote: true, id: :"like-button-#{business.id}") do %>
+       <i class="fa-lg fas fa-heart icon-btn liked"></i>
+   <% end %>
+<% else %>
+   <%= link_to(company_business_likes_path(@company.ids, business.id), method: :post, remote: true, id: :"like-button-#{business.id}") do %>
+       <i class="fa-lg fas fa-heart icon-btn not-like"></i>
+   <% end %>
+<% end %>

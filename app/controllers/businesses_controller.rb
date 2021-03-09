@@ -1,7 +1,8 @@
 class BusinessesController < ApplicationController
 
   def index 
-    @business = Business.all.where(ids = "")
+    @business = Business.all
+    @company = Company.all
   end
 
   def show
