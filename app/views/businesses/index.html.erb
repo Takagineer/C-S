@@ -25,7 +25,7 @@
             </li>
 
               <div id="like-btn-<%= business.id %>">
-                <%= render 'likes/like', business: business, company: company %>
+                <%= render partial: 'likes/like', locals: {business: business, company: company} %>
               </div>
 
         </ul>
