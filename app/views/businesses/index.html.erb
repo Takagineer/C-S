@@ -8,7 +8,7 @@
 
   <div class="middle_content">
     <div class="company_information">
-    <% @business.each do |business|%>
+    <% @business.zip(@company) do |business, company|%>
       <%# <% link_to "#" do %> 
         <ul class="divided_company_info">
             <li class = "business_company_image">
@@ -25,7 +25,7 @@
             </li>
 
               <div id="like-btn-<%= business.id %>">
-                <%= render 'likes/like', business: business, company: @company %>
+                <%= render 'likes/like', business: business, company: company %>
               </div>
 
         </ul>
