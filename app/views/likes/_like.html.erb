@@ -1,5 +1,5 @@
 <% if business.liked_by?(current_student) %>
-   <%= button_to(company_business_like_path(company.id, business.id), method: :delete, remote: true, id: :"like-button-#{business.id}") do %>
+   <%= button_to(company_business_like_path(@company.ids, business.id, likes.id), method: :delete, remote: true, id: :"like-button-#{business.id}") do %>
        <i class="fa-lg fas fa-heart icon-btn liked"></i>
    <% end %>
 <% else %>
