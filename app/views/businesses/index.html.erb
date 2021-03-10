@@ -2,13 +2,13 @@
 
   <div class="top_content">
     <h1>
-      企業一覧
+      業務一覧
     </h1>
   </div>
 
   <div class="middle_content">
     <div class="company_information">
-    <% @business.each do |business|%>
+    <% @business.zip(@company) do |business, company|%>
       <%# <% link_to "#" do %> 
         <ul class="divided_company_info">
             <li class = "business_company_image">
@@ -23,6 +23,11 @@
             <li class="business_reward">
               <%= business.reward%>
             </li>
+
+              <div id="like-btn-<%= business.id %>">
+                <%= render partial: 'likes/like', locals: {business: business, company: company} %>
+              </div>
+
         </ul>
       <%# <% end %> 
       <% end %>
@@ -31,9 +36,10 @@
 
   <div class="low_content">
     <h1>
-      人気の業務一覧
+      人気の企業一覧
     </h1>
     ここにいいね件数の多い会社を出力する
+    
   </div>
 
 
