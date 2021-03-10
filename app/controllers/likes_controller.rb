@@ -12,7 +12,7 @@ class LikesController < ApplicationController
     business = Business.find(params[:business_id]) 
     student = current_student
     like = Like.find_by(business_id: business.id, student_id: student.id)
-    like.delete
+    like.destroy
   end
 
   private
