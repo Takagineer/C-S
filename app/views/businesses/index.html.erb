@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 
-  <div class="top_content">
+  <div class="top_title">
     <h1>
       新着業務一覧
     </h1>
@@ -8,38 +8,59 @@
 
   <div class="middle_content">
     <div class="company_information">
-    <% @business.zip(@company) do |business, company|%>
-      <%# <% link_to "#" do %> 
-        <ul class="divided_company_info">
-            <li class = "business_company_image">
-              <%= image_tag business.image, class:"business_img" %>
-            </li>
-            <li class = "business_company_name">
-              <%= %>
-            </li>
-            <li class="business_content">
-              <%= business.content%>
-            </li>
-            <li class="business_reward">
-              <%= business.reward%>
-            </li>
+      <% @business.zip(@company) do |business, company|%>
+        <%# <% link_to "#" do %> 
+          <ul class="divided_company_info">
+              <li class = "business_company_image">
+                <%= image_tag business.image, class:"business_img" %>
+              </li>
+              <li class = "business_company_name">
+                <%= %>
+              </li>
+              <li class="business_content">
+                <%= business.content%>
+              </li>
+              <li class="business_reward">
+                <%= business.reward%>
+              </li>
 
-              <div id="like-btn-<%= business.id %>">
-                <%= render partial: 'likes/like', locals: {business: business, company: company} %>
-              </div>
-
-        </ul>
-      <%# <% end %> 
-      <% end %>
+                <div id="like-btn-<%= business.id %>">
+                  <%= render partial: 'likes/like', locals: {business: business, company: company} %>
+                </div>
+          </ul>
+        <%# <% end %> 
+        <% end %>
     </div>
   </div>
 
   <div class="low_content">
+  <div class = low_title>
     <h1>
-      人気の業務一覧
+       評価の高い業務一覧(学生側からの業務への評価を基に)
     </h1>
-    ここにいいね件数の多い会社を出力する
-    
+  </div>
+
+    <div class = "company_ranking">
+      <% @business.zip(@company) do |business, company|%>
+          <%# <% link_to "#" do %> 
+            <ul class="divided_company_ranking">
+                <li class = "business_company_image">
+                  <%= image_tag business.image, class:"business_img" %>
+                </li>
+                <li class = "business_company_name">
+                  <%= %>
+                </li>
+                <li class="business_content">
+                  <%= business.content%>
+                </li>
+                <li class="business_reward">
+                  <%= business.reward%>
+                </li>
+            </ul>
+          <%# <% end %> 
+          <% end %>
+    </div>
+
   </div>
 
 

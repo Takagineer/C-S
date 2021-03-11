@@ -3,7 +3,7 @@
   width: 15%;
 }
 
-.top_content{
+.top_title{
   background-color: coral;
 }
 
@@ -19,4 +19,17 @@
 .business_img{
   height: 33vh;
   width: 33vh;
+}
+
+.low_title{
+  background-color: coral;
+}
+
+.divided_company_ranking{
+  list-style: none;
+  width: 15%;
+}
+
+.company_ranking{
+  display: flex;
 }
