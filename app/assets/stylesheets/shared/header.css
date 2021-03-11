@@ -1,13 +1,13 @@
 header{
-  height: 15vh;
-  background-color: antiquewhite;
+  height: 10vh;
+  background-color: rgb(146, 140, 133);
   display: flex;
   justify-content: space-between;
   width: 100vw;
 }
 
 .logo{
-  font-size: 60px;
+  font-size: 50px;
 }
 
 
