@@ -2,10 +2,10 @@ class BusinessesController < ApplicationController
 
   def index 
     @business = Business.last(5)
-    @company = Company.all
   end
 
   def show
+    @business = Business.find(params[:id])
   end
 
   def new

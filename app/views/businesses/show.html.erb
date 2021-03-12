@@ -1,0 +1,50 @@
+<%= render "shared/header" %>
+<div class = "business_info">
+  <h3>会社名</h3>
+  <div>
+    <%= @business.company.company_name %>
+  </div>
+
+  <div>
+    <%= image_tag @business.image, class:"business_img" %>
+  </div>
+
+  <h3>業務名</h3>
+  <div>
+    <%= @business.content %>
+  </div>
+
+  <h3>配属場所</h3>
+  <div>
+    <%= @business.department %>
+  </div>
+
+  <h3>契約期間</h3>
+  <div>
+    <%= @business.period %>
+  </div>
+
+  <h3>報酬</h3>
+  <div>
+    <%= @business.reward %>
+  </div>
+
+  <h3>募集人数</h3>
+  <div>
+    <%= @business.number %>
+  </div>
+
+  <h3>掲載企業からのメッセージ</h3>
+  <div>
+    <%= @business.comment %>
+  </div>
+
+  <h3>募集人数</h3>
+  <div>
+    <%= @business.skill %>
+  </div>
+
+  <%# <%= link_to '#' %> %>
+</div>
+
+<%= render "shared/footer" %>
