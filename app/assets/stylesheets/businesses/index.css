@@ -1,11 +1,11 @@
 .divided_company_info{
   list-style: none;
   width: 15%;
-  transition-duration: 0.2s;
+  /* transition-duration: 0.2s; */
 }
 
 .divided_company_info:hover{
-  transform: translate(20px);
+  /* transform: translate(20px); */
 }
 
 .top_title{
@@ -34,12 +34,12 @@
   display: flex;
 }
 
-.divided_company_ranking{
+/* .divided_company_ranking{
   list-style: none;
   width: 15%;
   transition-duration: 0.2s;
-}
+} */
 
-.divided_company_ranking:hover{
+/* .divided_company_ranking:hover{
   transform: translate(20px);
-}
+} */
