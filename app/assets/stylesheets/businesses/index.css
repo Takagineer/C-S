@@ -1,6 +1,11 @@
 .divided_company_info{
   list-style: none;
   width: 15%;
+  transition-duration: 0.2s;
+}
+
+.divided_company_info:hover{
+  transform: translate(20px);
 }
 
 .top_title{
@@ -27,4 +32,14 @@
 
 .company_ranking{
   display: flex;
+}
+
+.divided_company_ranking{
+  list-style: none;
+  width: 15%;
+  transition-duration: 0.2s;
+}
+
+.divided_company_ranking:hover{
+  transform: translate(20px);
 }
