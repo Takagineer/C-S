@@ -29,7 +29,7 @@
                 </div>
           </ul>
         <% end %>
-        <% end %>
+      <% end %>
     </div>
   </div>
 
@@ -42,7 +42,7 @@
 
     <div class = "company_ranking">
       <% @business.zip(@company) do |business, company|%>
-          <%# <% link_to "#" do %> 
+          <%= link_to company_business_path(@company.ids, business.id) do %>
             <ul class="divided_company_ranking">
                 <li class = "business_company_image">
                   <%= image_tag business.image, class:"business_img" %>
@@ -57,8 +57,8 @@
                   <%= business.reward%>
                 </li>
             </ul>
-          <%# <% end %> 
-          <% end %>
+          <% end %> 
+       <% end %>
     </div>
 
   </div>
