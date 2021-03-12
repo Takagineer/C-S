@@ -8,8 +8,8 @@
 
   <div class="middle_content">
     <div class="company_information">
-      <% @business.zip(@company) do |business, company|%>
-        <%= link_to company_business_path(@company.ids, business.id) do %>
+      <% @business.each do |business| %>
+        <%= link_to company_business_path(business.company.id, business.id) do %>
           <ul class="divided_company_info">
               <li class = "business_company_image">
                 <%= image_tag business.image, class:"business_img" %>
@@ -25,7 +25,7 @@
               </li>
 
                 <div id="like-btn-<%= business.id %>">
-                  <%= render partial: 'likes/like', locals: {business: business, company: company} %>
+                  <%= render partial: 'likes/like', locals: {business: business} %>
                 </div>
           </ul>
         <% end %>
@@ -41,8 +41,8 @@
   </div>
 
     <div class = "company_ranking">
-      <% @business.zip(@company) do |business, company|%>
-          <%= link_to company_business_path(@company.ids, business.id) do %>
+      <% @business.each do |business| %>
+          <%= link_to company_business_path(business.company.id, business.id) do %>
             <ul class="divided_company_ranking">
                 <li class = "business_company_image">
                   <%= image_tag business.image, class:"business_img" %>
