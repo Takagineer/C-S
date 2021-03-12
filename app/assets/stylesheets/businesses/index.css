@@ -1,15 +1,15 @@
 .divided_company_info{
   list-style: none;
   width: 15%;
+  /* transition-duration: 0.2s; */
 }
 
-.top_content{
-  background-color: coral;
+.divided_company_info:hover{
+  /* transform: translate(20px); */
 }
 
-
-.low_content{
-  background-color: chartreuse;
+.top_title{
+  background-color: rgb(117, 100, 94);
 }
 
 .company_information{
@@ -20,3 +20,26 @@
   height: 33vh;
   width: 33vh;
 }
+
+.low_title{
+  background-color: coral;
+}
+
+.divided_company_ranking{
+  list-style: none;
+  width: 15%;
+}
+
+.company_ranking{
+  display: flex;
+}
+
+/* .divided_company_ranking{
+  list-style: none;
+  width: 15%;
+  transition-duration: 0.2s;
+} */
+
+/* .divided_company_ranking:hover{
+  transform: translate(20px);
+} */

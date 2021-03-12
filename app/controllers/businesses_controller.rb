@@ -1,7 +1,7 @@
 class BusinessesController < ApplicationController
 
   def index 
-    @business = Business.all
+    @business = Business.last(5)
     @company = Company.all
   end
 
