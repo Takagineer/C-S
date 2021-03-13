@@ -44,7 +44,7 @@
     <%= @business.skill %>
   </div>
 
-  <%= link_to '#' %>
+  <%= link_to company_business_contracted_works_path(@business.company.id, @business.id) %>
 </div>
 
 <%= render "shared/footer" %>

@@ -1,0 +1,2 @@
+class ContractedWorksController < ApplicationController
+end
