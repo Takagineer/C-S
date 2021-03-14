@@ -24,6 +24,6 @@ class Business < ApplicationRecord
     likes.where(student_id: student.id).exists?
   end
 
-  acts_as_followable
+
 
 end

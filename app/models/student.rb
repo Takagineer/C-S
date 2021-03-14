@@ -20,6 +20,6 @@ class Student < ApplicationRecord
     validates :year
   end
 
-  acts_as_followe
+
 
 end
