@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 2021_02_24_083211) do
     t.integer "student_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["business_id", "student_id"], name: "index_contracted_works_on_business_id_and_student_id", unique: true
   end
 
   create_table "evaluations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

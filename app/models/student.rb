@@ -20,6 +20,16 @@ class Student < ApplicationRecord
     validates :year
   end
 
+  def following?(student)
+    following_re
+  end
 
+  def follow!(student)
+    
+  end
+
+  def unfollow!(student)
+    
+  end
 
 end
