@@ -25,16 +25,6 @@ class Business < ApplicationRecord
     likes.where(student_id: student.id).exists?
   end
 
-  def follow(student)
-    
-  end
-
-  def unfollow(student)
-    
-  end
-
-  def following(student)
-    
-  end
+  
 
 end
