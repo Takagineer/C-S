@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ContractedWorkTest < ActiveSupport::TestCase
+class AppliedWorkTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

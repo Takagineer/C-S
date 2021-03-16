@@ -1,0 +1,2 @@
+class AppliedWork < ApplicationRecord
+end
