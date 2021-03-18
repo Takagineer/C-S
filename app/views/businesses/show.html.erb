@@ -50,7 +50,7 @@
   </p>
 
   
-    <% unless AppliedWork.where(student_id: current_student.id).exists? %>
+    <% unless AppliedWork.where(business_id:@business.id , student_id: current_student.id).exists? %>
       <%= button_to "応募する", company_business_applied_works_path(@business.company.id, @business.id) %>
     <% else %>
       <%= "既に応募しています。企業様からの結果をお待ちください。" %>
