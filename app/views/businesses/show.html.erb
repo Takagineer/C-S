@@ -39,16 +39,23 @@
     <%= @business.comment %>
   </div>
 
-  <h3>募集人数</h3>
+  <h3>必要とするスキル</h3>
   <div>
     <%= @business.skill %>
   </div>
 
-  <div>
+  <p>
     下のボタンをクリックするとあなたの登録内容が企業側へ送信されます。
-    今後のやり取りに関しましては、登録時のメールアドレス宛に企業側の担当者より直接連絡がございます。
-  </div>
-  <%= button_to "応募する", company_business_applied_works_path(@business.company.id, @business.id) %>
+    <br>今後のやり取りに関しましては、登録時のメールアドレス宛に企業側の担当者より直接連絡がございます。
+  </p>
+
+  
+    <% unless AppliedWork.where(student_id: current_student.id).exists? %>
+      <%= button_to "応募する", company_business_applied_works_path(@business.company.id, @business.id) %>
+    <% else %>
+      <%= "既に応募しています。企業様からの結果をお待ちください。" %>
+    <% end %>
+  
 
 </div>
 
