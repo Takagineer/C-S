@@ -4,6 +4,7 @@ class Business < ApplicationRecord
   belongs_to :student
   has_one_attached :image
   has_many :likes,dependent: :destroy
+  has_many :contracted_works
 
   with_options presence: true do
     validates :content
@@ -23,5 +24,7 @@ class Business < ApplicationRecord
   def liked_by?(student)
     likes.where(student_id: student.id).exists?
   end
+
+  
 
 end

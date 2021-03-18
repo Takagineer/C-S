@@ -16,9 +16,10 @@ Rails.application.routes.draw do
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root to: "businesses#index"
+  root to: 'businesses#index'
   resources :companies, only: [:index, :show, :edit] do
     resources :businesses, only: [:index, :new, :create, :show] do
+      resources :applied_works, only: [:create]
       resources :likes, only:[:create, :destroy]
     end
   end

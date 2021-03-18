@@ -7,6 +7,7 @@ class Student < ApplicationRecord
   has_one_attached :image
   has_many :likes,dependent: :destroy
   has_one :business
+  has_many :contracted_works
 
   with_options presence: true do
     validates :email
@@ -19,7 +20,5 @@ class Student < ApplicationRecord
     validates :birthday
     validates :year
   end
-
-  
 
 end

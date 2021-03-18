@@ -1,15 +1,15 @@
 <%= render "shared/header" %>
 <div class = "business_info">
-  <h3>会社名</h3>
-  <div>
+
+  <h4>
     <%= @business.company.company_name %>
-  </div>
+  </h4>
 
   <div>
     <%= image_tag @business.image, class:"business_img" %>
   </div>
 
-  <h3>業務名</h3>
+  <h3>職種</h3>
   <div>
     <%= @business.content %>
   </div>
@@ -39,12 +39,24 @@
     <%= @business.comment %>
   </div>
 
-  <h3>募集人数</h3>
+  <h3>必要とするスキル</h3>
   <div>
     <%= @business.skill %>
   </div>
 
-  <%# <%= link_to '#' %> %>
+  <p>
+    下のボタンをクリックするとあなたの登録内容が企業側へ送信されます。
+    <br>今後のやり取りに関しましては、登録時のメールアドレス宛に企業側の担当者より直接連絡がございます。
+  </p>
+
+  
+    <% unless AppliedWork.where(business_id:@business.id , student_id: current_student.id).exists? %>
+      <%= button_to "応募する", company_business_applied_works_path(@business.company.id, @business.id) %>
+    <% else %>
+      <%= "既に応募しています。企業様からの結果をお待ちください。" %>
+    <% end %>
+  
+
 </div>
 
 <%= render "shared/footer" %>
