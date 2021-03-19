@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   
 
-  resources :students, only: [:index, :search] do 
+  resources :students, only: [:index, :search, :show] do 
     member do
       get 'search'
     end
