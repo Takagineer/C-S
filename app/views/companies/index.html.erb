@@ -4,14 +4,15 @@
 
 
 <h2>登録内容</h2>
-<h3>掲載写真</h3>
-<%= image_tag current_company.image, class:"company_img" %>
-<h3>社名</h3>
-<%= current_company.company_name %>
-<h3>メールアドレス</h3>
-<%= current_company.email %>
-<h3>会社紹介</h3>
-<%= current_company.company_introduction %>
+  
+    <h3>掲載写真</h3>
+    <%= image_tag current_company.image, class:"company_img" %>
+    <h3>社名</h3>
+    <%= current_company.company_name %>
+    <h3>メールアドレス</h3>
+    <%= current_company.email %>
+    <h3>会社紹介</h3>
+    <%= current_company.company_introduction %>
 
 <div class = "subject">現在募集中の業務</div>
 
@@ -20,9 +21,9 @@
     <div class ="accepting">
       <div class = "business_contents"><%= "・"+ business.content%></div>
       <div class = "likes">いいね件数の表示</div>
-      <div class = "student_applicants"> <%= link_to "申込者" , student_path(:id) %></div>
+      <div class = "student_applicants"> <%= link_to "申込者" , "#" %></div>
+<%= AppliedWork.where(company_id="current_company.id").student_id %>
 
-      <%# <div class = "business_image"><%= image_tag business.image %></div> 
     </div>
   <% end %>
 <% end %>

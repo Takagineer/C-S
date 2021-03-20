@@ -4,7 +4,7 @@ class Business < ApplicationRecord
   belongs_to :student
   has_one_attached :image
   has_many :likes,dependent: :destroy
-  has_many :contracted_works
+  has_many :applied_works,dependent: :destroy
 
   with_options presence: true do
     validates :content

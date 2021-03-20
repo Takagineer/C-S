@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   root to: 'businesses#index'
   resources :companies, only: [:index, :show, :edit] do
     resources :businesses, only: [:index, :new, :create, :show] do
-      resources :applied_works, only: [:create]
+      resources :applied_works, only: [:index, :create]
       resources :likes, only:[:create, :destroy]
     end
   end
