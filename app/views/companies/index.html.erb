@@ -21,7 +21,7 @@
     <div class ="accepting">
       <div class = "business_contents"><%= "・"+ business.content%></div>
       <div class = "likes">いいね件数の表示</div>
-      <div class = "student_applicants"> <%= link_to "申込者" , company_business_applied_works_path(:business_id, :company_id) %></div>
+      <div class = "student_applicants"> <%= link_to "申込者" , company_business_applied_works_path(current_company.id,business.id) %></div>
 
 
     </div>
