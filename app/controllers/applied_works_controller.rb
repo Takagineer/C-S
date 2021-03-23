@@ -3,7 +3,7 @@ before_action :authenticate_student!, only:[:create]
 before_action :authenticate_company!, only:[:index]
 
   def index
-    @applied_work = AppliedWork.where(company_id: current_company.id)
+    @applied_works = AppliedWork.where(company_id: current_company.id)
   end
 
   def create

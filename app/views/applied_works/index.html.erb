@@ -2,9 +2,9 @@
 
 <h1><%= current_company.company_name+"様 用ページ" %></h1>
 <h3><%= "応募中の業務" %></h3>
-<%=@applied_work.business.content%>
+<%=@applied_works.business.content%>
 
 <h3><%= "申込者一覧" %></h3>
-<%=@applied_work.student.family_name%>
+<%=@applied_works.student.family_name%>
 
 <%= render "shared/footer" %>
