@@ -1,8 +1,10 @@
 <%= render "shared/header" %>
 
-<h3><%= "会社名" %></h3>
+<h1><%= current_company.company_name+"様 用ページ" %></h1>
 <h3><%= "応募中の業務" %></h3>
-<p><%= "応募中の業務一覧を表示" %></p>
+<%=@applied_work.business.content%>
+
 <h3><%= "申込者一覧" %></h3>
+<%=@applied_work.student.family_name%>
 
 <%= render "shared/footer" %>
