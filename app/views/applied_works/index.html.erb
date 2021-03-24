@@ -2,16 +2,19 @@
 
 <h1><%= current_company.company_name+"様 用ページ" %></h1>
 <h3><%= "応募中の業務" %></h3>
-<%= Business.find(params[:business_id]).content %>
+<%= Business.find(params[:business_id]).content+"の求人"  %>
 
 <h3><%= "申込者一覧" %></h3>
   <% @applied_works.each do |appliedwork| %>
+  <table border = "1" >
     <tr>
       <th>姓</th>
       <th>名</th>
       <th>大学</th>
-      <th>年次</th>
+      <th>誕生日</th>
       <th>スキル</th>
+      <th>ステータス</th>
+      <th>学生詳細ページへ</th>
     </tr>
     <tr>
       <td><%= appliedwork.student.first_name %></td>
@@ -19,8 +22,11 @@
       <td><%= appliedwork.student.university %></td>
       <td><%= appliedwork.student.birthday %></td>
       <td><%= appliedwork.student.year %></td>
+
+      <td><%= appliedwork.status %></td>
+      <td><%= link_to "移動する","#" %></td>
     </tr>
-    
+  </table>
   <% end %>
 
 <%= render "shared/footer" %>
