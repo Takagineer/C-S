@@ -16,15 +16,14 @@
       <th>ステータス</th>
       <th>学生詳細ページへ</th>
     </tr>
-    <tr>
+    <tr align="center">
       <td><%= appliedwork.student.first_name %></td>
       <td><%= appliedwork.student.last_name %></td>
       <td><%= appliedwork.student.university %></td>
       <td><%= appliedwork.student.birthday %></td>
       <td><%= appliedwork.student.year %></td>
-
       <td><%= appliedwork.status %></td>
-      <td><%= link_to "移動する","#" %></td>
+      <td><%= link_to "移動する", student_path(:id) %></td>
     </tr>
   </table>
   <% end %>
