@@ -5,6 +5,7 @@
 <%= Business.find(params[:business_id]).content+"の求人"  %>
 
 <h3><%= "申込者一覧" %></h3>
+<% if @applied_works.present? then %>
   <% @applied_works.each do |appliedwork| %>
   <table border = "1" >
     <tr>
@@ -27,5 +28,7 @@
     </tr>
   </table>
   <% end %>
-
+<% else %>
+  <%= "まだ応募はきていません。もうしばらくお待ちください。"%>
+<% end %>
 <%= render "shared/footer" %>
