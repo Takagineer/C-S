@@ -1,5 +1,47 @@
 <%= render "shared/header" %>
 
-<%="学生詳細ページ"%>
+<%= "学生詳細ページ"%>
+<% if @students.present? then %>
+  <% @students.each do |student| %>
+    <table border = "1" >
+      <tr align="center">
+        <tr>
+          <td><%= student.first_name %></td>
+        </tr>
 
+        <tr>
+          <td><%= student.last_name %></td>
+        </tr>
+
+        <tr>
+          <td><%= student.university %></td>
+        </tr>
+
+        <tr>
+          <td><%= student.student_introduction %></td>
+        </tr>
+
+        <tr>
+          <td><%= student.skill %></td>
+        </tr>
+
+        <tr>
+          <td><%= student.birthday %></td>
+        </tr>
+
+        <tr>
+          <td><%= student.year %></td>
+        </tr>
+
+        <tr>
+          <td><%= "下のプルダウンより、ステータスを変更してください。" %></td>
+        </tr>
+
+        <tr>
+          <td><%= "ここにプルダウンリストを作成する" %></td>
+        </tr>
+      </tr>
+
+  <% end %>
+<% end %>
 <%= render "shared/footer" %>

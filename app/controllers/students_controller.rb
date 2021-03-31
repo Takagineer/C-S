@@ -1,5 +1,10 @@
 class StudentsController < ApplicationController
+  
   def index
+  end
+
+  def show
+    @students = Student.where(id: params[:id])
   end
 
   def search
