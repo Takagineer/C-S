@@ -34,3 +34,7 @@
   height: 33vh;
   width: 33vw;
 }
+
+.company_information{
+  display: flex;
+}

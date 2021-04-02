@@ -4,14 +4,15 @@
 
 
 <h2>登録内容</h2>
-<h3>掲載写真</h3>
-<%= image_tag current_company.image, class:"company_img" %>
-<h3>社名</h3>
-<%= current_company.company_name %>
-<h3>メールアドレス</h3>
-<%= current_company.email %>
-<h3>会社紹介</h3>
-<%= current_company.company_introduction %>
+  
+    <h3>掲載写真</h3>
+    <%= image_tag current_company.image, class:"company_img" %>
+    <h3>社名</h3>
+    <%= current_company.company_name %>
+    <h3>メールアドレス</h3>
+    <%= current_company.email %>
+    <h3>会社紹介</h3>
+    <%= current_company.company_introduction %>
 
 <div class = "subject">現在募集中の業務</div>
 
@@ -20,18 +21,17 @@
     <div class ="accepting">
       <div class = "business_contents"><%= "・"+ business.content%></div>
       <div class = "likes">いいね件数の表示</div>
-      <div class = "book_mark">ブックマーク機能？</div>
-      <div class = "student_applicants"> <%= link_to "申込者" , "#" %></div>
+      <div class = "student_applicants"> <%= link_to "申込者" , company_business_applied_works_path(current_company.id,business.id) %></div>
 
-      <%# <div class = "business_image"><%= image_tag business.image %></div> 
+
     </div>
   <% end %>
 <% end %>
   
 
 <div class = "link_btn" >
-  <div><%= link_to "会社情報編集ページ",edit_company_registration_path%></div>
-  <div><%= link_to "業務募集投稿ページ",new_company_business_path(current_company.id)%></div>
+  <div><%= link_to "会社情報編集ページ", edit_company_registration_path %></div>
+  <div><%= link_to "業務募集投稿ページ", new_company_business_path(current_company.id) %></div>
 </div>
 
 <%= render "shared/footer" %>
