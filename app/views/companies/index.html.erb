@@ -1,20 +1,30 @@
 <%= render "shared/header" %>
 
-<h1><%= current_company.company_name+"様 用ページ" %></h1>
 
+<h1 class="company_name"><%= current_company.company_name+"様 用ページ" %></h1>
+<div class="top_container">
+  <h1><%= image_tag current_company.image, class:"company_img" %></h1>
 
-<h2>登録内容</h2>
-  
-    <h3>掲載写真</h3>
-    <%= image_tag current_company.image, class:"company_img" %>
-    <h3>社名</h3>
-    <%= current_company.company_name %>
-    <h3>メールアドレス</h3>
-    <%= current_company.email %>
-    <h3>会社紹介</h3>
-    <%= current_company.company_introduction %>
+  <table border="1", class="company_table">
+    <tr>
+      <th colspan="2">会社概要</th>
+    </tr>
+    <tr align="center">
+      <td>社名</td>
+      <td><%= current_company.company_name %></td>
+    </tr>
+    <tr align="center">
+      <td>メールアドレス</td>
+      <td><%= current_company.email %></td>
+    </tr>
+    <tr align="center">
+      <td>会社紹介</td>
+      <td><%= current_company.company_introduction %></td>
+    </tr>
+  </table>
+</div>
 
-<div class = "subject">現在募集中の業務</div>
+<h1 class="subject">現在募集中の業務</h1>
 
 <% if @company_businesses.present? then %>
   <% @company_businesses.each do |business| %>
@@ -22,8 +32,6 @@
       <div class = "business_contents"><%= "・"+ business.content%></div>
       <div class = "likes">いいね件数の表示</div>
       <div class = "student_applicants"> <%= link_to "申込者" , company_business_applied_works_path(current_company.id,business.id) %></div>
-
-
     </div>
   <% end %>
 <% end %>
