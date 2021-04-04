@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @students = Student.where(id: params[:id])
+    @student = Student.where(id: params[:id])
   end
 
   def search
