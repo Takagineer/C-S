@@ -1,9 +1,9 @@
 header{
-  height: 10vh;
-  background-color: white;
+  height: 10%;
   display: flex;
   justify-content: space-between;
-  width: 100vw;
+  width: 95%;
+  background-image: url('facebook_cover_photo_2.png');
 }
 
 .logo{
