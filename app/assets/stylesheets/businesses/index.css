@@ -8,10 +8,6 @@
   /* transform: translate(20px); */
 }
 
-.top_title{
-  background-color: rgb(117, 100, 94);
-}
-
 .company_information{
   display: flex;
 }
@@ -19,10 +15,6 @@
 .business_img{
   height: 33vh;
   width: 33vh;
-}
-
-.low_title{
-  background-color: coral;
 }
 
 .divided_company_ranking{
