@@ -7,6 +7,10 @@ header{
   background-repeat:no-repeat;
 }
 
+.link_to_my_page{
+  text-decoration: none;
+}
+
 .logo{
   font-size: 50px;
 }
