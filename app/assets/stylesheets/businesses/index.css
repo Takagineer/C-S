@@ -33,6 +33,10 @@
   display: flex;
 }
 
+.link_to_company_business{
+  text-decoration: none;
+}
+
 /* .divided_company_ranking{
   list-style: none;
   width: 15%;
