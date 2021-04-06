@@ -53,6 +53,11 @@
                 <li class="business_reward">
                   <%= business.reward%>
                 </li>
+
+                <div id="like-btn-<%= business.id %>">
+                  <%= render partial: 'likes/like', locals: {business: business} %>
+                </div>
+                
             </ul>
           <% end %> 
        <% end %>
