@@ -3,7 +3,8 @@ header{
   display: flex;
   justify-content: space-between;
   width: 95%;
-  background-image: url('facebook_cover_photo_2.png');
+  background-size:cover;
+  background-repeat:no-repeat;
 }
 
 .logo{
