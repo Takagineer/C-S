@@ -1,48 +1,53 @@
 <%= render "shared/header" %>
 <div class = "business_info">
 
-  <h4>
-    <%= @business.company.company_name %>
-  </h4>
-
   <div>
     <%= image_tag @business.image, class:"business_img" %>
   </div>
 
-  <h3>職種</h3>
-  <div>
-    <%= @business.content %>
-  </div>
+  <table border = "1">
+    <tr>
+      <tr>
+        <td align = "center">会社名</td>
+        <td align = "center"><%= @business.company.company_name %></td>
+      </tr>
 
-  <h3>配属場所</h3>
-  <div>
-    <%= @business.department %>
-  </div>
+      <tr>
+        <td align = "center">職種</td>
+        <td align = "center"><%= @business.content %></td>
+      </tr>
 
-  <h3>契約期間</h3>
-  <div>
-    <%= @business.period %>
-  </div>
+      <tr>
+        <td align = "center">配属場所</td>
+        <td align = "center"><%= @business.department %></td>
+      </tr>
 
-  <h3>報酬</h3>
-  <div>
-    <%= @business.reward %>
-  </div>
+      <tr>
+        <td align = "center">契約期間</td>
+        <td align = "center"><%= @business.period %></td>
+      </tr>
 
-  <h3>募集人数</h3>
-  <div>
-    <%= @business.number %>
-  </div>
+      <tr>
+        <td align = "center">報酬</td>
+        <td align = "center"><%= @business.reward %></td>
+      </tr>
 
-  <h3>掲載企業からのメッセージ</h3>
-  <div>
-    <%= @business.comment %>
-  </div>
+      <tr>
+        <td align = "center">募集人数</td>
+        <td align = "center"><%= @business.number %></td>
+      </tr>
 
-  <h3>必要とするスキル</h3>
-  <div>
-    <%= @business.skill %>
-  </div>
+      <tr>
+        <td align = "center">掲載企業からのメッセージ</td>
+        <td><%= @business.comment %></td>
+      </tr>
+
+      <tr>
+        <td align = "center">必要とするスキル</td>
+        <td><%= @business.skill %></td>
+      </tr>
+    </tr>
+  </table>
 
   <p>
     下のボタンをクリックするとあなたの登録内容が企業側へ送信されます。
