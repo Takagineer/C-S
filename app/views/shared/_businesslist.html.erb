@@ -1,0 +1,29 @@
+<div class="company_information">
+      <% @student_search_businesses.each do |business| %>
+        <%= link_to company_business_path(business.company.id, business.id) ,class: "link_to_company_business" do %>
+          <ul class="divided_company_info">
+
+              <li class="business_company_image">
+                <%= image_tag business.image, class:"business_img" %>
+              </li>
+
+              <li class="business_company_name">
+                <%=business.company.company_name %>
+              </li>
+
+              <li class="business_content">
+                <%= business.content%>
+              </li>
+
+              <li class="business_reward">
+                <%= business.reward%>
+              </li>
+
+                <div id="like-btn-<%= business.id %>">
+                  <%= render partial: 'likes/like', locals: {business: business} %>
+                </div>
+
+          </ul>
+        <% end %>
+      <% end %>
+    </div>

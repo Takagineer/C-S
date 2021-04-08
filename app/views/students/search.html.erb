@@ -2,17 +2,9 @@
 <h1 class="subject"><%= current_student.first_name+"様 検索結果一覧ページ" %></h1>
 
 <% if @student_search_businesses.present? %>
-  <div>
-    <% @student_search_businesses.each do |business| %>
-    <%= business.content %>
-    <%= image_tag business.image,class:"business_image" %>
-  </div>
-  <% end %>
+  <%= render "shared/businesslist"%>
 <% else %>
   <h3>該当する業務はありません。</h3>
 <%end%>
-
-<%# <div><%= link_to students_path %></div>
-
 
 <%= render "shared/footer" %>
