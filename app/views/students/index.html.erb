@@ -1,16 +1,11 @@
 <%= render "shared/header" %>
-<h1><%= current_student.first_name+"様 マイページ" %></h1>
-<div>業務検索機能</div>
+<h1 class="subject" ><%= current_student.first_name+"様 マイページ" %></h1>
+<h2>業務検索機能</h2>
   <%= form_with url: search_student_path(current_student.id), method: :get, local: true do |f| %>
     <%= f.text_field :keyword, placeholder: "投稿を検索する" %>
     <%= f.submit "検索" %>
   <% end %>
 
-
-
-<div>検索した業務を表示して、それに対していいね機能を実装する</div>
-<div></div>
 <div>上記2つの機能を実装したのちに応募機能を実装する。</div>
-<div><%= link_to "応募状況確認ページ", '#' %></div>
 
 <%= render "shared/footer" %>

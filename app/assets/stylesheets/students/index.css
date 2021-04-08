@@ -1,4 +1,4 @@
-.subject ,.company_name {
+.subject{
   font-size: 30px;
   width: 50%;
   position: relative;
@@ -9,30 +9,3 @@
   font-weight: lighter;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.56);
 }
-
-.link_btn{
-  background-color: aqua;
-  width: 20vw;
-}
-
-.book_mark{
-  margin: 10px;
-}
-
-.company_img{
-  height: 33vh;
-  width: 33vw;
-}
-
-.top_container{
-  text-align: center;
-}
-
-.company_information{
-  display: flex;
-}
-
-.company_table, .applied_status{
-  margin:0 auto;
-}
-

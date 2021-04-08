@@ -1,25 +1,27 @@
 <%= render "shared/header" %>
 
-  <div class="top_title">
-    <h1>
+    <h1 class="subject">
       新着業務一覧
     </h1>
-  </div>
 
-  <div class="middle_content">
+
     <div class="company_information">
       <% @business.each do |business| %>
-        <%= link_to company_business_path(business.company.id, business.id) do %>
+        <%= link_to company_business_path(business.company.id, business.id) ,class: "link_to_company_business" do %>
           <ul class="divided_company_info">
-              <li class = "business_company_image">
+
+              <li class="business_company_image">
                 <%= image_tag business.image, class:"business_img" %>
               </li>
-              <li class = "business_company_name">
+
+              <li class="business_company_name">
                 <%=business.company.company_name %>
               </li>
+
               <li class="business_content">
                 <%= business.content%>
               </li>
+
               <li class="business_reward">
                 <%= business.reward%>
               </li>
@@ -27,22 +29,20 @@
                 <div id="like-btn-<%= business.id %>">
                   <%= render partial: 'likes/like', locals: {business: business} %>
                 </div>
+
           </ul>
         <% end %>
       <% end %>
     </div>
-  </div>
 
   <div class="low_content">
-  <div class = low_title>
-    <h1>
+    <h1 class="subject">
        人気の業務一覧
     </h1>
-  </div>
 
     <div class = "company_ranking">
       <% @business.each do |business| %>
-          <%= link_to company_business_path(business.company.id, business.id) do %>
+          <%= link_to company_business_path(business.company.id, business.id) ,class: "link_to_company_business" do %>
             <ul class="divided_company_ranking">
                 <li class = "business_company_image">
                   <%= image_tag business.image, class:"business_img" %>
@@ -56,6 +56,11 @@
                 <li class="business_reward">
                   <%= business.reward%>
                 </li>
+
+                <div id="like-btn-<%= business.id %>">
+                  <%= render partial: 'likes/like', locals: {business: business} %>
+                </div>
+
             </ul>
           <% end %> 
        <% end %>

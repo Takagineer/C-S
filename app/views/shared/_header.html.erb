@@ -1,27 +1,27 @@
 <header class="top_page_contents">
   <div class="logo">
-    <%=link_to "C × S", "/" %>
+    <%=link_to image_tag("horizontal_on_white_by_logaster.png"), "/"%>
   </div>
   
   <div class="navi">
     <ul class="top_logo_company">
     <%# ユーザーのログイン状態によって表示内容を変更する %>
       <% if company_signed_in? %>
-        <li><%= link_to current_company.company_name+"様マイページ",  companies_path(current_company.id) %></li>
+        <li><%= link_to current_company.company_name+"様マイページ",  companies_path(current_company.id) , class:"link_to_my_page"%></li>
         <li><%= button_to 'Exit', destroy_company_session_path, method: :delete %></li>
       <% else %>
-        <li><%= link_to "company_新規登録",new_company_registration_path %></li>
-        <li><%= link_to "ログイン", new_company_session_path %></li>
+        <li><%= link_to "company_新規登録",new_company_registration_path, class:"link_to_my_page" %></li>
+        <li><%= link_to "ログイン", new_company_session_path, class:"link_to_my_page" %></li>
       <% end %>
     </ul>
 
     <ul class="top_logo_student">
       <% if student_signed_in? %>
-        <li><%= link_to current_student.first_name+"様マイページ", students_path %></li>
+        <li><%= link_to current_student.first_name+"様マイページ", students_path, class:"link_to_my_page" %></li>
         <li><%= button_to 'Exit', destroy_student_session_path, method: :delete %></li>
       <% else %>
-        <li><%= link_to "student_新規登録",new_student_registration_path %></li>
-        <li><%= link_to "ログイン", new_student_session_path %></li>
+        <li><%= link_to "student_新規登録",new_student_registration_path, class:"link_to_my_page" %></li>
+        <li><%= link_to "ログイン", new_student_session_path, class:"link_to_my_page" %></li>
       <% end %>
     </ul>
   </div>

@@ -1,0 +1,25 @@
+.business_subject{
+  width: 20%;
+}
+
+.business_show_image{
+  height: 50%;
+  width: 38%;
+}
+
+table{
+  border-collapse: collapse;
+  margin: 15px auto;
+}
+
+tr:nth-child(odd){
+  background-color: #ddd
+}
+
+table th,table td{
+  padding: 10px 0;
+}
+
+.caution{
+  color: red;
+}

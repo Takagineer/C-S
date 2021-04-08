@@ -1,51 +1,57 @@
 <%= render "shared/header" %>
 <div class = "business_info">
 
-  <h4>
-    <%= @business.company.company_name %>
-  </h4>
-
-  <div>
-    <%= image_tag @business.image, class:"business_img" %>
+  <div align="center">
+    <%= image_tag @business.image,class:"business_show_image"%>
   </div>
 
-  <h3>職種</h3>
-  <div>
-    <%= @business.content %>
-  </div>
+  <table>
+    <tr>
+      <th colspan="2">募集内容</th>
+    </tr>
+    <tr align = "center">
+      <td class="business_subject">会社名</td>
+      <td><%= @business.company.company_name %></td>
+    </tr>
 
-  <h3>配属場所</h3>
-  <div>
-    <%= @business.department %>
-  </div>
+    <tr align = "center">
+      <td class="business_subject">職種</td>
+      <td><%= @business.content %></td>
+    </tr>
 
-  <h3>契約期間</h3>
-  <div>
-    <%= @business.period %>
-  </div>
+    <tr align = "center">
+      <td class="business_subject">配属場所</td>
+      <td><%= @business.department %></td>
+    </tr>
 
-  <h3>報酬</h3>
-  <div>
-    <%= @business.reward %>
-  </div>
+    <tr align = "center">
+      <td class="business_subject">契約期間</td>
+      <td><%= @business.period %></td>
+    </tr>
 
-  <h3>募集人数</h3>
-  <div>
-    <%= @business.number %>
-  </div>
+    <tr align = "center">
+      <td class="business_subject">報酬</td>
+      <td><%= @business.reward %></td>
+    </tr>
 
-  <h3>掲載企業からのメッセージ</h3>
-  <div>
-    <%= @business.comment %>
-  </div>
+    <tr align = "center">
+      <td class="business_subject">募集人数</td>
+      <td><%= @business.number %></td>
+    </tr>
 
-  <h3>必要とするスキル</h3>
-  <div>
-    <%= @business.skill %>
-  </div>
+    <tr align = "center">
+      <td class="business_subject">掲載企業からのメッセージ</td>
+      <td><%= @business.comment %></td>
+    </tr>
 
-  <p>
-    下のボタンをクリックするとあなたの登録内容が企業側へ送信されます。
+    <tr align = "center">
+      <td class="business_subject">必要とするスキル</td>
+      <td><%= @business.skill %></td>
+    </tr>
+  </table>
+
+  <p class="caution">
+    応募ボタンをクリックすると取り消しはできませんのでご注意ください。
     <br>今後のやり取りに関しましては、登録時のメールアドレス宛に企業側の担当者より直接連絡がございます。
   </p>
 
@@ -53,7 +59,7 @@
     <% unless AppliedWork.where(business_id:@business.id , student_id: current_student.id).exists? %>
       <%= button_to "応募する", company_business_applied_works_path(@business.company.id, @business.id) %>
     <% else %>
-      <%= "既に応募しています。企業様からの結果をお待ちください。" %>
+      <div class="caution">※既に応募しています。企業様からの結果をお待ちください。</div>
     <% end %>
   
 
