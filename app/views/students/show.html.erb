@@ -9,12 +9,12 @@
       </tr>
       <tr>
         <td align ="center">名前</td>
-        <td><%= student.first_name + " " + student.last_name %></td>
+        <td align ="center"><%= student.first_name + " " + student.last_name %></td>
       </tr>
 
       <tr>
         <td align ="center">出身大学</td>
-        <td><%= student.university %></td>
+        <td align ="center"><%= student.university %></td>
       </tr>
 
       <tr>
@@ -29,12 +29,12 @@
 
       <tr>
         <td align ="center">誕生日</td>
-        <td><%= student.birthday %></td>
+        <td align ="center"><%= student.birthday %></td>
       </tr>
 
       <tr>
         <td align ="center">年次</td>
-        <td><%= student.year %></td>
+        <td align ="center"><%= student.year %></td>
       </tr>
 
       <tr>
@@ -45,7 +45,7 @@
       <tr>
         <%= form_with model: @statu do |f| %>
             <td>対応状況変更</td>
-            <td><%= f.select :status, [["未対応", 1], ["採用予定", 2], ["お見送り",3], ["交渉中",4]] %></td>
+            <td align ="center"><%= f.select :status, [["未対応", 1], ["採用予定", 2], ["お見送り",3], ["交渉中",4]] %></td>
           <tr>
             <td><%= f.submit "ステータス更新"%></td>
           </tr>
