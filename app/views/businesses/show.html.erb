@@ -49,7 +49,7 @@
     </tr>
   </table>
 
-  <p>
+  <p class="caution">
     応募ボタンをクリックすると取り消しはできませんのでご注意ください。
     <br>今後のやり取りに関しましては、登録時のメールアドレス宛に企業側の担当者より直接連絡がございます。
   </p>
@@ -58,7 +58,7 @@
     <% unless AppliedWork.where(business_id:@business.id , student_id: current_student.id).exists? %>
       <%= button_to "応募する", company_business_applied_works_path(@business.company.id, @business.id) %>
     <% else %>
-      <div>※既に応募しています。企業様からの結果をお待ちください。</div>
+      <div class="caution">※既に応募しています。企業様からの結果をお待ちください。</div>
     <% end %>
   
 

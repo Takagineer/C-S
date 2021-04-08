@@ -18,3 +18,7 @@ tr:nth-child(odd){
 table th,table td{
   padding: 10px 0;
 }
+
+.caution{
+  color: red;
+}
