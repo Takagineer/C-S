@@ -9,6 +9,7 @@
 
 table{
   border-collapse: collapse;
+  margin: 15px auto;
 }
 
 tr:nth-child(odd){

@@ -5,47 +5,48 @@
     <%= image_tag @business.image,class:"business_show_image"%>
   </div>
 
-  <table border = "">
+  <table>
     <tr>
-      <tr align = "center">
-        <td class="business_subject">会社名</td>
-        <td><%= @business.company.company_name %></td>
-      </tr>
+      <th colspan="2">募集内容</td>
+    </tr>
+    <tr align = "center">
+      <td class="business_subject">会社名</td>
+      <td><%= @business.company.company_name %></td>
+    </tr>
 
-      <tr align = "center">
-        <td class="business_subject">職種</td>
-        <td><%= @business.content %></td>
-      </tr>
+    <tr align = "center">
+      <td class="business_subject">職種</td>
+      <td><%= @business.content %></td>
+    </tr>
 
-      <tr align = "center">
-        <td class="business_subject">配属場所</td>
-        <td><%= @business.department %></td>
-      </tr>
+    <tr align = "center">
+      <td class="business_subject">配属場所</td>
+      <td><%= @business.department %></td>
+    </tr>
 
-      <tr align = "center">
-        <td class="business_subject">契約期間</td>
-        <td><%= @business.period %></td>
-      </tr>
+    <tr align = "center">
+      <td class="business_subject">契約期間</td>
+      <td><%= @business.period %></td>
+    </tr>
 
-      <tr align = "center">
-        <td class="business_subject">報酬</td>
-        <td><%= @business.reward %></td>
-      </tr>
+    <tr align = "center">
+      <td class="business_subject">報酬</td>
+      <td><%= @business.reward %></td>
+    </tr>
 
-      <tr align = "center">
-        <td class="business_subject">募集人数</td>
-        <td><%= @business.number %></td>
-      </tr>
+    <tr align = "center">
+      <td class="business_subject">募集人数</td>
+      <td><%= @business.number %></td>
+    </tr>
 
-      <tr align = "center">
-        <td class="business_subject">掲載企業からのメッセージ</td>
-        <td><%= @business.comment %></td>
-      </tr>
+    <tr align = "center">
+      <td class="business_subject">掲載企業からのメッセージ</td>
+      <td><%= @business.comment %></td>
+    </tr>
 
-      <tr align = "center">
-        <td class="business_subject">必要とするスキル</td>
-        <td><%= @business.skill %></td>
-      </tr>
+    <tr align = "center">
+      <td class="business_subject">必要とするスキル</td>
+      <td><%= @business.skill %></td>
     </tr>
   </table>
 
