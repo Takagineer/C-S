@@ -1,13 +1,10 @@
 <%= render "shared/header" %>
 
-<h1><%= current_company.company_name+"様 用ページ" %></h1>
-<h3><%= "応募中の業務" %></h3>
-<%= Business.find(params[:business_id]).content+"の求人"  %>
+<h2><%= "申込者一覧" %></h2>
 
-<h3><%= "申込者一覧" %></h3>
 <% if @applied_works.present? then %>
   <% @applied_works.each do |appliedwork| %>
-  <table border = "1" >
+  <table>
     <tr>
       <th>姓</th>
       <th>名</th>
