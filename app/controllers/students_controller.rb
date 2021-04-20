@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
   
   def index
+    @applied_works = AppliedWork.where(student_id: current_student.id)
   end
 
   def show
