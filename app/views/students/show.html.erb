@@ -38,20 +38,6 @@
         <td align ="center"><%= student.year %></td>
       </tr>
 
-      <tr>
-        <td align ="center">対応状況</td>
-        <td><%= "下のプルダウンより、ステータスを変更してください。※一度採用予定、お見送りにしてしまうと再度選択できませんのでご注意ください。" %></td>
-      </tr>
-
-      <tr>
-        <%= form_with model: @statu do |f| %>
-            <td>対応状況変更</td>
-            <td align ="center"><%= f.select :status, [["未対応", 1], ["採用予定", 2], ["お見送り",3], ["交渉中",4], ["口コミ待ち",5], ["完全終了",6]] %></td>
-          <tr>
-            <td><%= f.submit "ステータス更新"%></td>
-          </tr>
-        <% end %>
-      </tr>
     </table>
 
   <% end %>
