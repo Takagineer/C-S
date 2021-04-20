@@ -1,7 +1,7 @@
 class Business < ApplicationRecord
 
   belongs_to :company
-  belongs_to :student
+  belongs_to :student, optional: true
   has_one_attached :image
   has_many :likes,dependent: :destroy
   has_many :applied_works,dependent: :destroy
