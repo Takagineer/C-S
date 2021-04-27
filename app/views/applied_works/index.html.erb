@@ -4,6 +4,7 @@
 
 <% if @applied_works.present? then %>
   <% @applied_works.each do |appliedwork| %>
+  
   <table>
     <tr>
       <th>姓</th>
@@ -21,7 +22,8 @@
       <td><%= appliedwork.student.birthday %></td>
       <td><%= appliedwork.student.year %></td>
       <td><%= link_to "移動する", student_path(id:appliedwork.student.id) %></td>
-        <%= form_with model: @statu do |f| %>
+
+        <%= form_with  do |f| %>
           <td align ="center"><%= f.select :status, [["未対応", 1], ["採用予定", 2], ["お見送り",3], ["交渉中",4], ["口コミ待ち",5], ["終了",6]] %></td>
           <td><%= f.submit "更新"%></td>
         <% end %>
