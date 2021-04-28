@@ -13,11 +13,13 @@ before_action :authenticate_company!, only:[:index, :update]
   end
   
   def update
+    status.update
+    redirect_to root_path
   end
 
 
   private
     def status_params 
-      params.require(:AppliedWork).permit(:status)
+      @statuses.require(:AppliedWork).permit(:status)
     end
 end
